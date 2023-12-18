@@ -1,0 +1,17 @@
+//https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=3b3bc5d5f37f478e907a04a6fe316247;
+import 'dart:convert';
+
+import 'package:http/http.dart';
+
+
+class FetchNews{
+static fetchNews() async {
+   Response response = await get(Uri.parse(
+       "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=3b3bc5d5f37f478e907a04a6fe316247"));
+   Map bodydata = jsonDecode(response.body);
+   print(bodydata);
+
+
+}
+
+}
